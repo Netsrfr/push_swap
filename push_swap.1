@@ -1,0 +1,66 @@
+.TH push_swap 1 "April 21, 2017" 42
+.SH NAME
+.B push_swap
+\-- sorts a 'stack' of integers and prints the instructions used
+for sorting
+.SH SYNOPSIS
+.B ./push_swap
+<int> <int>
+.br
+.B ./push_swap
+<"\fIint int int\fR">
+.br
+.B ARG=\fR"\fIint int int\fR";
+.B ./push_swap ARG
+.SH DESCRIPTION
+.B push_swap
+instructions are printed to the standard output and separated by '\\n'
+.PP
+.RE
+.RS 5
+.B Available operations are:
+.br
+.RS 2
+.B sa:
+swap a - swap the first 2 elements at the top of stack a.
+(Do nothing if there is only one or no elements).
+.br
+.B sb:
+swap b - swap the first 2 elements at the top of stack b.
+(Do nothing if there is only one or no elements).
+.br
+.B ss: sa
+and \fBsb\fR at the same time.
+.br
+.B pa:
+push a - take the first element at the top of b and put it at the top of a.
+(Do nothing if b is empty).
+.br
+.B pb:
+push b - take the first element at the top of a and put it at the top of b.
+(Do nothing if a is empty).
+.br
+.B ra:
+rotate a - shift up all elements of stack a by 1. The first element becomes
+the last one.
+.br
+.B rb:
+rotate b - shift up all elements of stack b by 1.
+The first element becomes the last one.
+.br
+.B rr: ra
+and \fBrb\fR at the same time.
+.br
+.B rra:
+reverse rotate a - shift down all elements of stack a by 1.
+The last element becomes the first one.
+.br
+.B rrb:
+reverse rotate b - shift down all elements of stack b by 1.
+The last element becomes the first one.
+.br
+.B rrr: rra
+and \fBrrb\fR at the same time.
+.sp
+.SH AUTHOR
+jpfeffer jpfeffer@student.42.us.org
